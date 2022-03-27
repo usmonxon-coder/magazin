@@ -1,0 +1,26 @@
+.navbar .container .link {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 22px;
+}
+.navbar .box2 {
+  cursor: pointer;
+}
+.navbar .dropdown .dropdown-menu[data-bs-popper] {
+  transform: translateX(-50%);
+}
+.navbar .box2 img {
+  width: 40px;
+  position: relative;
+}
+.navbar .container .link1 {
+  text-decoration: none;
+  color: black;
+}
+.navbar .box2 span {
+  transform: translateY(-7px) translateX(-5px);
+  border-radius: 50%;
+}
+.navbar .box2 .span1 {
+  font-size: 19px;
+}
