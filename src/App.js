@@ -222,7 +222,7 @@ class App extends Component {
   };
 
   componentDidMount = () => {
-    // localStorage.setItem("balance", JSON.stringify(4000));
+    localStorage.setItem("balance", JSON.stringify(4000));
     let person = this.state.person;
     person.balance = JSON.parse(localStorage.getItem("balance"))
       ? JSON.parse(localStorage.getItem("balance"))
