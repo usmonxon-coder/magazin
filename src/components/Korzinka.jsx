@@ -15,7 +15,10 @@ class Korzinka extends Component {
     if (this.props.isMatch) {
       btn.click();
     } else {
-      toast.warning("iltimos malumotlarni togri kiriting");
+      toast.warning("iltimos malumotlarni togri kiriting", {
+        autoClose: 3000,
+        position: "top-center",
+      });
     }
   };
 
@@ -25,20 +28,24 @@ class Korzinka extends Component {
         <div className="korzinka">
           <div className="container">
             <div className="price py-4 d-flex align-items-center justify-content-between">
-              <h2>My card</h2>
+              <div className="my">
+                <h2>My card</h2>
+              </div>
               <div className="nav">
                 <h3 className="me-3">All Products price: </h3>
-                <button className="btn btn-warning me-2">
-                  {this.props.totalprice}$
-                </button>
-                <button
-                  className="btn btn-info"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                  data-bs-whatever="@mdo"
-                >
-                  Check
-                </button>
+                <div className="xarid">
+                  <button className="btn btn-warning me-2">
+                    {this.props.totalprice} $
+                  </button>
+                  <button
+                    className="btn btn-info"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo"
+                  >
+                    Check
+                  </button>
+                </div>
               </div>
             </div>
             <div>
@@ -49,57 +56,59 @@ class Korzinka extends Component {
                   {this.props.selectedProducts.map((item, index) => (
                     <div
                       key={index}
-                      className="col-6 mb-3  d-flex align-items-center"
+                      className="col-lg-6 mb-3  d-flex align-items-center"
                     >
-                      <div className="box1 w-50">
-                        <img className="w-100" src={item.imgUrl} alt="rasm" />
-                      </div>
-                      <div className="box2">
-                        <h5>
-                          <b>Name: </b>
-                          {item.Name}
-                        </h5>
-                        <h5>
-                          <b>Brand: </b>
-                          {item.Brand}
-                        </h5>
-                        <h5>
-                          <b>Price: </b>
-                          {item.Price}$
-                        </h5>
-                        <h5>
-                          <b>Total count: </b>
-                          {item.count}
-                        </h5>
-                        <h5>
-                          <b>Total price: </b>
-                          {item.count * item.Price}$
-                        </h5>
-                        <button
-                          onClick={() =>
-                            this.props.changeNewscount("minus", index)
-                          }
-                          className="bnt btn1 btn-secondary border-none shadow-none px-4 py-1"
-                        >
-                          -
-                        </button>
-                        <button className="bnt btn2 btn-light shadow-none px-3 disabled py-1">
-                          {item.count}
-                        </button>
-                        <button
-                          onClick={() =>
-                            this.props.changeNewscount("plus", index)
-                          }
-                          className="bnt btn3 btn-secondary shadow-none px-4 py-1"
-                        >
-                          +
-                        </button>
-                        <button
-                          onClick={() => this.props.delete(item.id)}
-                          className="btn d-block w-100 mt-1 btn-danger"
-                        >
-                          Delete
-                        </button>
+                      <div className="row">
+                        <div className="col-sm-6 mx-auto">
+                          <img className="w-100" src={item.imgUrl} alt="rasm" />
+                        </div>
+                        <div className="col-sm-6 mx-auto">
+                          <h5>
+                            <b>Name: </b>
+                            {item.Name}
+                          </h5>
+                          <h5>
+                            <b>Brand: </b>
+                            {item.Brand}
+                          </h5>
+                          <h5>
+                            <b>Price: </b>
+                            {item.Price}$
+                          </h5>
+                          <h5>
+                            <b>Total count: </b>
+                            {item.count}
+                          </h5>
+                          <h5>
+                            <b>Total price: </b>
+                            {item.count * item.Price}$
+                          </h5>
+                          <button
+                            onClick={() =>
+                              this.props.changeNewscount("minus", index)
+                            }
+                            className="bnt btn1 btn-secondary border-none shadow-none px-4 py-1"
+                          >
+                            -
+                          </button>
+                          <button className="bnt btn2 btn-light shadow-none px-3 disabled py-1">
+                            {item.count}
+                          </button>
+                          <button
+                            onClick={() =>
+                              this.props.changeNewscount("plus", index)
+                            }
+                            className="bnt btn3 btn-secondary shadow-none px-4 py-1"
+                          >
+                            +
+                          </button>
+                          <button
+                            onClick={() => this.props.delete(item.id)}
+                            className="btn d-block w-100 mt-1 btn-danger"
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -117,7 +126,7 @@ class Korzinka extends Component {
                 <div className="modal-content">
                   <div className="modal-header">
                     <h5 className="modal-title" id="exampleModalLabel">
-                      New message     
+                      New message
                     </h5>
                     <button
                       type="button"

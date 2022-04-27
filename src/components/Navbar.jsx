@@ -19,13 +19,7 @@ class Navbar extends Component {
             <div className="dropdown">
               <div className="box2">
                 <Link to="/Korzinka">
-                  <img
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    src="/images/savat.png"
-                    alt="rasm"
-                  />
+                  <img src="/images/savat.png" alt="rasm" />
                   <span className="badge bg-danger">
                     {this.props.selectedProductsCount}
                   </span>
@@ -33,25 +27,6 @@ class Navbar extends Component {
                 <span className="text-info span1">
                   {this.props.person.name}, {this.props.person.balance}$
                 </span>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton1"
-                >
-                  {this.props.selectedProducts.map((item, index) => (
-                    <li key={index} className="dropdown-item">
-                      {item.Name} <b> -{item.count}X</b>
-                    </li>
-                  ))}
-                  <hr className="m-0 mb-1" />
-                  <li>
-                    <button className="btn btn-info w-100">
-                      <Link className="link1" to="/Korzinka">
-                        <b>Totalprice: </b>
-                        {this.props.totalprice}$
-                      </Link>
-                    </button>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

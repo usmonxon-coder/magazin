@@ -13,15 +13,15 @@ class Products extends Component {
             <h1 className="py-3 text-danger">Telefonlar</h1>
             <div className="row py-3">
               {this.props.mahsulot.map((item, index) => (
-                <div key={index} className="col-lg-3 col-md-6 mb-3 h-100">
-                  <div className="card w-100 shadow border ">
+                <div key={index} className="col-lg-3 col-md-6 mb-3">
+                  <div className="card w-100 h-100 shadow border ">
                     <img className="w-100 pt-3" src={item.imgUrl} alt="rasm" />
                     <hr className="w-100" />
                     <div className="p-2">
-                      <h4>
+                      <h5>
                         <b>Name: </b>
                         {item.Name}
-                      </h4>
+                      </h5>
                       <p>
                         <b>Brand: </b>
                         {item.Brand}
@@ -67,8 +67,8 @@ class Products extends Component {
                   </div>
                   <div className="modal-body">
                     <div className="row">
-                      <div className="col-4">
-                        <div className="card">
+                      <div className="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <div className="card h-100">
                           <div className="card-header">Info</div>
                           <div className="card-body">
                             <h4>
@@ -84,8 +84,8 @@ class Products extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-4">
-                        <div className="card">
+                      <div className="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <div className="card h-100">
                           <div className="card-header">Product</div>
                           <div className="card-body">
                             <img
@@ -99,8 +99,8 @@ class Products extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-4">
-                        <div className="card">
+                      <div className="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <div className="card h-100">
                           <div className="card-header">Action</div>
                           <div className="card-body">
                             <h4>

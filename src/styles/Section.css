@@ -1,6 +1,4 @@
-.section {
-  background-color: red;
-}
-.section   h2 {
-  color: blue;
+.section .card {
+  width: 35%;
+  border-radius: 30px;
 }
