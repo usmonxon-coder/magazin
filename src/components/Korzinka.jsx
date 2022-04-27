@@ -59,10 +59,10 @@ class Korzinka extends Component {
                       className="col-lg-6 mb-3  d-flex align-items-center"
                     >
                       <div className="row">
-                        <div className="col-sm-6 mx-auto">
+                        <div className="col-sm-6 mx-auto mb-3 mb-md-0">
                           <img className="w-100" src={item.imgUrl} alt="rasm" />
                         </div>
-                        <div className="col-sm-6 mx-auto">
+                        <div className="col-sm-6 mx-auto p-3 p-sm-0">
                           <h5>
                             <b>Name: </b>
                             {item.Name}
@@ -83,28 +83,30 @@ class Korzinka extends Component {
                             <b>Total price: </b>
                             {item.count * item.Price}$
                           </h5>
+                          <div className=" btn-group">
+                            <button
+                              className="btn btn1 btn-secondary border-none shadow-none px-4 py-1"
+                              onClick={() =>
+                                this.props.changeNewscount("minus", index)
+                              }
+                            >
+                              -
+                            </button>
+                            <button className="btn btn2 btn-light shadow-none px-3 disabled py-1">
+                              {item.count}
+                            </button>
+                            <button
+                              className="btn btn3 btn-secondary shadow-none px-4 py-1"
+                              onClick={() =>
+                                this.props.changeNewscount("plus", index)
+                              }
+                            >
+                              +
+                            </button>
+                          </div>
                           <button
-                            onClick={() =>
-                              this.props.changeNewscount("minus", index)
-                            }
-                            className="bnt btn1 btn-secondary border-none shadow-none px-4 py-1"
-                          >
-                            -
-                          </button>
-                          <button className="bnt btn2 btn-light shadow-none px-3 disabled py-1">
-                            {item.count}
-                          </button>
-                          <button
-                            onClick={() =>
-                              this.props.changeNewscount("plus", index)
-                            }
-                            className="bnt btn3 btn-secondary shadow-none px-4 py-1"
-                          >
-                            +
-                          </button>
-                          <button
-                            onClick={() => this.props.delete(item.id)}
                             className="btn d-block w-100 mt-1 btn-danger"
+                            onClick={() => this.props.delete(item.id)}
                           >
                             Delete
                           </button>

@@ -11,21 +11,21 @@ class Section extends Component {
             <Link className="text-decoration-none text-black" to="Products">
               <img
                 className="w-75 pt-3 mx-auto"
-                src="/images/1.jpg"
+                src="/images/7.jpg"
                 alt="mahsulot"
               />
               <hr className="w-100" />
               <div className="p-2">
                 <h4>
-                  <b>Name:</b> samsung galaxy a12
+                  <b>Name:</b> Iphone 13 pro max
                 </h4>
                 <p>
                   <b>Brand: </b>
-                  Samsung
+                  Apple
                 </p>
                 <p>
                   <b>Price: </b>
-                  180$
+                  1300$
                 </p>
                 <button className="btn btn-danger d-block w-50 mx-auto mb-3">
                   More

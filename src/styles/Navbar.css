@@ -3,9 +3,6 @@
   color: #ffff;
   font-size: 22px;
 }
-.navbar .box2 {
-  cursor: pointer;
-}
 .navbar .dropdown .dropdown-menu[data-bs-popper] {
   transform: translateX(-50%);
 }

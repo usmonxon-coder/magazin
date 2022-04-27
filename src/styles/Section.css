@@ -3,3 +3,13 @@
   border-radius: 30px;
   text-align: center;
 }
+@media (max-width: 992px) {
+  .section .card {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .section .card {
+    width: 90%;
+  }
+}
