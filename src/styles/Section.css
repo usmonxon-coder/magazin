@@ -1,4 +1,5 @@
 .section .card {
   width: 35%;
   border-radius: 30px;
+  text-align: center;
 }
